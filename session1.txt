@@ -59,4 +59,28 @@ AWS CLI is one way to configure authentication, but actual authentication is don
 aws configure
 The aws configure command is used to set up AWS credentials by providing the Access Key, Secret Key, default region, and output format.
 
+HCL -> HashiCorp Configuration Language
+
+name, image, sg , storage disk , key(no-key)
+
+{
+   key = "value"
+   
+   }
+   
+   resource "aws_instance" "name-of-resource" {
+       ami = " "
+	   name = " "
+	   storage = " "
+	   key = " "
+	   instance_type = " "
+	   
+	   }
+
+     terraform init -> downloads the provider, initialize terraform
+     terraform plan -> It will give us a plan what it is going to do
+     terraform apply -> creates the infra as given in the plan
+     
+
+
 
