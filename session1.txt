@@ -1,0 +1,62 @@
+Terraform Introduction
+======================
+
+Ansible can create, manage, and update infrastructure, but it is not a stateful tool like Terraform.
+Ansible contains Collections/Modules. It will have parameters
+Ansible can create infrastructure but it cannot manage and update infra because of no state management feature available in ansible
+Ansible originally created for configuration management and not good for infra management
+
+Interview:-
+Ansible is a stateless configuration management tool that uses modules from collections to manage systems in an idempotent way.
+It can create and manage infrastructure, but since it does not maintain a state file, it is not ideal for complex infrastructure lifecycle management.
+Therefore, Terraform is typically used for infrastructure provisioning, and Ansible is used for configuring the created servers.
+
+use terraform for infrastructure creation , once servers are created by terraform handover them to ansible ,ansible completes configuration in
+the servers
+
+Terraform --> IaaC (Infrastructure as a code)
+
+CM -> Configuration as a code
+CRUD
+Creation of configuration
+Reading the configuration
+Update the configuration
+Delete  the configuration
+
+Infra as a code
+===============
+Version Control
+Automatic CRUD
+Consistent infra -> DEV,QA,UAT,PRE-POD,PERF,PROD
+Inventory -> what are the services we are using in cloud
+Cost Optimisation 
+Time Saving and no human errors
+Dependencies -> SG(security group), ec2-instance , and R53
+Modular reusable infra
+
+Terraform, Pulumi, Cloudformation, etc..
+
+1. Terraform
+2. AWS CLI v2
+
+Provider:-
+--------
+A provider in Terraform is a plugin that allows Terraform to interact with a specific platform like AWS, Azure, or GCP.
+
+provider "aws" {
+  region = "us-east-1"
+}
+
+provider "azurerm" {
+  features {}
+}
+
+provider "google" {
+  project = "my-project"
+}
+
+AWS CLI is one way to configure authentication, but actual authentication is done using AWS credentials (Access Key & Secret Key).
+aws configure
+The aws configure command is used to set up AWS credentials by providing the Access Key, Secret Key, default region, and output format.
+
+
